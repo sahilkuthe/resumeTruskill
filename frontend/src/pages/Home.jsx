@@ -92,7 +92,7 @@ function Home() {
     <div className="mt-12 text-center">
       <Link
        to={'auth/signin'}
-        className="inline-block rounded bg-green-950 px-12 py-3 text-sm font-medium text-white transition hover:bg-green-900 focus:outline-none focus:ring focus:ring-slate-400"
+        className="inline-block rounded bg-primary px-12 py-3 text-sm font-medium text-white transition hover:bg-green-900 focus:outline-none focus:ring focus:ring-slate-400"
       >
         Get Started Today
       </Link>

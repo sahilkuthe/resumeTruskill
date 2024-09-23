@@ -38,7 +38,8 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/create-resume',
         element: <CreateResume/>
-      }
+      },
+      
     ]
   }
 ])

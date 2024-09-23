@@ -1,12 +1,38 @@
 import Header from '../customComponents/Header'
 import { Button } from '@/components/ui/button'
 import { UserButton, useUser } from '@clerk/clerk-react'
+import axios from 'axios'
 import { AtomIcon, Edit, Share2 } from 'lucide-react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+
+async function handleAuth(email){
+  
+  const res = await axios({
+    method:"post",
+    baseURL: import.meta.env.VITE_BASE_URL,
+    url: "/api/user",
+    data: {email},
+    
+    // headers:{
+    //   authtoken:localStorage.getItem("token")
+    // }
+  })
+  localStorage.setItem("token", res.data.authToken)
+}
+
+
 
 function Home() {
   const {user, isSignedIn} = useUser();
+  useEffect(() => {
+    
+    if(isSignedIn){
+      console.log(user.primaryEmailAddress.emailAddress)
+      handleAuth(user?.primaryEmailAddress.emailAddress)
+    }
+  },[isSignedIn] )
+  
   return (
     <div>
       <Header/>

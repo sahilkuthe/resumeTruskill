@@ -41,7 +41,7 @@ function Home() {
         <div className="py-2 px-4 mx-auto max-w-screen-xl text-center lg:pt-8 lg:px-12">
           
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            Build Your Resume <span className='text-primary'>With AI</span> </h1>
+            Build Your Resume With <span className='text-primary'>Truskill AI</span> </h1>
           <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">From Generic to Exceptional: AI-Driven Resumes for Any Role</p>
           {isSignedIn?
             <Link to={'/dashboard'} className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-primary focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
